@@ -1,7 +1,6 @@
-nums = [1,2,3,4,5]
-
-for x in nums:          # runs n times
-    for y in nums:      # runs n times for EACH x
-        print(x, y)     # O(1)
-
-        
+def has_duplicates(a):
+    for i in range(len(a)):        # outer loop
+        for j in range(i):         # inner loop
+            if a[i] == a[j]:
+                return True
+    return False

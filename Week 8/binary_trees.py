@@ -29,20 +29,18 @@ nodeB.right = nodeF
 
 nodeF.left = nodeG
 
-
-#Let's now see how to traverse this code using BFS. 
 from collections import deque
 
 def bfs_traverse(root):
     if root is None:
         return
-    
+
     queue = deque([root])
-    
-    while queue:
+
+    while(queue):
         node = queue.popleft()
         print(node.data)
-        
+    
         if node.left:
             queue.append(node.left)
         if node.right:
